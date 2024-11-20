@@ -1,0 +1,285 @@
+/* Root */
+:root {
+  --light-bg-color: #ffffff;
+  --second-color: #2e962c;
+  --main-color: #000000;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  text-shadow: none;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: var(--light-bg-color);
+  scroll-behavior: smooth;
+  height: 100vh;
+  overflow-x: hidden;
+}
+
+/* Main container styles */
+.container {
+  position: relative;
+  width: 100%;
+  min-height: 660px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Logo section styles */
+.logo {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  display: flex;
+  align-items: center;
+  z-index: 4;
+}
+
+.logo img {
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+}
+
+.logo h1 {
+  color: var(--light-bg-color);
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+/* Content section styles */
+.content {
+  text-align: center;
+  color: var(--light-bg-color);
+  z-index: 40;
+}
+
+.content h2 {
+  font-size: 2.5rem;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+.content .tagline {
+  font-size: 1.5rem;
+  margin: 10px 0;
+}
+
+/* Button styling */
+.start-btn {
+  background-color: var(--second-color);
+  color: var(--light-bg-color);
+  padding: 10px 20px;
+  border: none;
+  margin-top: 20px;
+  border-radius: 25px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.start-btn:hover {
+  background-color: #218838;
+  transform: scale(1.1);
+}
+
+.layer {
+  position: absolute;
+  inset: 0;
+  background-color: #0000004d;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+}
+
+/* Background image styling */
+.background img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  z-index: 1;
+}
+
+.section-container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.section-container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.secound-section {
+  margin-top: 30px;
+}
+
+.secound-section .paragraph {
+  font-weight: 500;
+  font-size: 1.2rem;
+}
+
+.facts {
+  margin-block: 40px;
+}
+
+.facts h4 {
+  font-weight: 700;
+  font-size: 48px;
+  color: var(--second-color);
+}
+
+.facts-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  width: 90%;
+  margin: 0 auto;
+  align-items: center;
+  margin-block: 20px;
+}
+
+.text-side {
+  text-align: start;
+}
+
+.image-side img {
+  width: 90%;
+  object-fit: cover;
+  border-radius: 40px;
+}
+
+.text-side .facts-main-text {
+  font-weight: 600;
+  font-size: 1.4rem;
+  color: var(--second-color);
+}
+
+.text-side .facts-paragraph {
+  font-weight: 500;
+  font-size: 1.3rem;
+  margin-block: 10px;
+  padding-right: 10px;
+}
+
+footer {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  margin: 0 auto;
+  align-items: center;
+  padding-block: 50px;
+}
+
+.footer-paragraph {
+  font-weight: 600;
+  font-size: 1.8rem;
+  color: var(--second-color);
+}
+
+ul {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  align-items: center;
+}
+
+li {
+  list-style: none;
+  color: var(--main-color);
+  font-weight: 500;
+}
+
+
+/* Responsive Design - For tablets */
+@media (max-width: 768px) {
+  .facts-container {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .text-side,
+  .image-side {
+    margin: auto;
+  }
+
+  .facts h4 {
+    font-size: 24px;
+  }
+
+  .secound-section .paragraph {
+    font-size: 1rem;
+  }
+  .container {
+    min-height: 460px;
+  }
+  .content h2 {
+    font-size: 1.6rem;
+  }
+
+  .content .tagline {
+    font-size: 1.2rem;
+  }
+
+  .start-btn {
+    font-size: 1rem;
+    padding: 8px 16px;
+  }
+}
+
+/* Responsive Design - For mobile phones */
+@media (max-width: 480px) {
+  .facts-container {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .image-side img {
+    width: 100%;
+  }
+
+  .facts h4 {
+    font-size: 20px;
+  }
+
+  .secound-section .paragraph {
+    font-size: 0.9rem;
+  }
+
+  .text-side .facts-main-text {
+    font-size: 1.2rem;
+  }
+
+  .text-side .facts-paragraph {
+    font-size: 1rem;
+  }
+
+  .container {
+    min-height: 460px;
+  }
+
+  .logo h1 {
+    font-size: 1.2rem;
+  }
+
+  .content h2 {
+    font-size: 1.2rem;
+  }
+
+  .content .tagline {
+    font-size: 1rem;
+  }
+
+  .start-btn {
+    font-size: 0.9rem;
+    padding: 6px 12px;
+  }
+}
